@@ -1,0 +1,47 @@
+CREATE TABLE `Participant_DIM` (
+  `Participant_Key` int,
+  `Participant_ID` int,
+  `gender` varchar(45),
+  `age` int,
+  `age_group` varchar(45),
+  `type` varchar(45),
+  `status` varchar(45),
+  PRIMARY KEY (`Participant_Key`)
+);
+
+CREATE TABLE `Incident_Fact` (
+  `Incident_Key` int,
+  `Incident_ID` int,
+  `Date_Key` int,
+  `N_Killed` int,
+  `N_Injured` int,
+  `Location_Key` int,
+  `Participant_Key` int,
+  `has_guns` boolean,
+  `has_participants` boolean,
+  `has_characteristics` boolean,
+  `has_location` boolean,
+  PRIMARY KEY (`Incident_Key`),
+  KEY `NK` (`Incident_ID`)
+);
+
+CREATE TABLE `Location_DIM` (
+  `Location_Key` int,
+  `state` varchar(45),
+  `city_county` varchar(45),
+  `latitude` decimal(4,2),
+  `longitude` decimal(5,2),
+  PRIMARY KEY (`Location_Key`)
+);
+
+CREATE TABLE `Date_DIM` (
+  `Date_Key` int,
+  `Incident_Date` datetime,
+  PRIMARY KEY (`Date_Key`)
+);
+
+CREATE TABLE `Characteristics_DIM` (
+  `Incident_Key` int,
+  `characteristic` varchar(150)
+);
+
