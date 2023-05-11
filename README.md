@@ -1,4 +1,4 @@
 # MyContributions - Dummy Project at EY Sydney. 
-Task - Make a realtime dashboard on azure cloud, pulling data from an Open Source Website Called Gun Violence Archive.  
-Objective - Manage and Monitor Gun Violence Incidents in US
+Objective - Manage and Monitor Gun Violence Incidents in US.
+Task - Make a realtime dashboard on azure cloud, pulling data from an open source website called Gun Violence Archive.  
 Stack - Azure, PowerBI
